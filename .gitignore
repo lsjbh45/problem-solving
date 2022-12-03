@@ -1,0 +1,5 @@
+.vscode
+deprecated
+.mypy_cache
+format.py
+test.py
