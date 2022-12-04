@@ -36,3 +36,17 @@ counter[(1, 'a')] += 1 # {((1, 'a'), 3), ((1, 'b'), 1)}
 counter = counter + Counter([(2, 'a')]) # {((1, 'a'), 3), ((1, 'b'), 1), ((2, 'a'), 1)}
 counter.most_common(2) # [((1, 'a'), 3), ((1, 'b'), 1)]
 ```
+
+# String
+
+## check alphanumeric
+
+```python
+chars.isalnum() # chars.isalpha() and chars.isnumeric()
+```
+
+## change case
+
+```python
+chars.lower() # check: chars.islower()
+```
