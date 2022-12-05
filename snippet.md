@@ -66,3 +66,21 @@ chars.lower() # check: chars.islower()
 s = 'a, a, a, a, b,b,b,c, c'
 re.sub(r'[^\w]', ' ', s) # 'a  a  a  a  b b b c  c'
 ```
+
+# sorting
+
+## sorted()
+
+Python sorted(): use Timsort algorithm (Insertion sort + Merge sort heuristically)
+
+Best case: O(n), Average case: O(n log n), Worst case: O(n log n)
+
+```python
+sorted(iterable, key=lambda x: x, reverse=True) # iterable -> list
+```
+
+## list.sort()
+
+```python
+list.sort() # method of list, sort list itself
+```
