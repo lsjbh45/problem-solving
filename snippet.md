@@ -8,7 +8,36 @@ def count(lst: List[Tuple[int, str]]) -> Dict[Tuple[int, str], int]:
     return Counter(lst)
 ```
 
+# list
+
+dynamic array (== C++ std::vector, Java ArrayList) + various type (characteristic of linked list)
+
+| Operation      | Time       |
+| -------------- | ---------- |
+| len(a)         | O(1)       |
+| a[i]           | O(1)       |
+| a[i:j]         | O(k)       |
+| elem in a      | O(n)       |
+| a.count(elem)  | O(n)       |
+| a.index(elem)  | O(n)       |
+| a.append(elem) | O(1)       |
+| a.pop()        | O(1)       |
+| a.pop(i)       | O(n)       |
+| del a[i]       | O(n)       |
+| a.sort()       | O(n log n) |
+| min(a), max(a) | O(n)       |
+| a.reverse()    | O(n)       |
+
 # dictionary
+
+key-value hash table (== C++ std::unordered_map, Java HashMap)
+
+| Operation      | Time |
+| -------------- | ---- |
+| len(a)         | O(1) |
+| a[key]         | O(1) |
+| a[key] = value | O(1) |
+| key in a       | O(1) |
 
 ## default dictionary
 
