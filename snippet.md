@@ -58,6 +58,24 @@ chars.isalnum() # chars.isalpha() and chars.isnumeric()
 chars.lower() # check: chars.islower()
 ```
 
+## encoding
+
+representation: UTF-8 (variable-width, Python 3~)
+
+internal: fixed-width encoding (based on character range)
+
+## longest common substring
+
+dynamic programming, O(n^2)
+
+```python
+    common_len = [[0 for _ in range(len(s))] for _ in range(len(s))]
+    for i in range(len(s)):
+        for j in range(len(s)):
+            if s[i] == s_rev[j]:
+                common_len[i][j] = (common_len[i - 1][j - 1] if i and j else 0) + 1
+```
+
 # regex
 
 ## replace non-alphanumeric
