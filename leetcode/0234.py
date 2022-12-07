@@ -15,9 +15,6 @@ class ListNode:
         self.val = val
         self.next = next
 
-    def data(self):
-        return self.val, self.next.data() if self.next else None
-
 
 # Solution 1: deque
 # Time: 808 ms
