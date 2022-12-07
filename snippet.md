@@ -73,6 +73,12 @@ di = {'a': 1, 'b': 2, 'c': 3}
 max(di, key=di.get) # 'c'
 ```
 
+## dictionary comprehension
+
+```python
+{key: value for key, value in dict.items()}
+```
+
 # String
 
 ## check alphanumeric
@@ -130,4 +136,28 @@ sorted(iterable, key=lambda x: x, reverse=True) # iterable -> list
 
 ```python
 list.sort() # method of list, sort list itself
+```
+
+# Array
+
+## prefix sum
+
+$$
+p_n = a_0 + a_1 + a_2 + ... + a_n
+$$
+
+$$
+a_l + a_{l+1} + ... + a_{r-1} + a_r = p_r - p_{l-1}
+$$
+
+```python
+# implemetation: O(n)
+sum_val = 0
+prefix_sum = []
+for num in nums:
+    prefix_sum.append(sum_val)
+    sum_val += i
+
+# get subtotal value: O(1)
+subtotal = prefix_sum[right] - prefix_sum[left - 1]
 ```
