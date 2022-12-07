@@ -1,3 +1,13 @@
+# sys
+
+## min, max
+
+```python
+import sys
+min_value = sys.minsize # float('-inf')
+max_value = sys.maxsize # float('inf')
+```
+
 # type hint
 
 ## composite data type
