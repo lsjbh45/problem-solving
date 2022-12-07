@@ -18,6 +18,12 @@ def count(lst: List[Tuple[int, str]]) -> Dict[Tuple[int, str], int]:
     return Counter(lst)
 ```
 
+## optional
+
+```python
+data: Optional[Type] = None # Type | None
+```
+
 # list
 
 dynamic array (== C++ std::vector, Java ArrayList) + various type (characteristic of linked list)
@@ -89,7 +95,7 @@ max(di, key=di.get) # 'c'
 {key: value for key, value in dict.items()}
 ```
 
-# String
+# string
 
 ## check alphanumeric
 
@@ -148,7 +154,7 @@ sorted(iterable, key=lambda x: x, reverse=True) # iterable -> list
 list.sort() # method of list, sort list itself
 ```
 
-# Array
+# array
 
 ## prefix sum
 
@@ -170,4 +176,21 @@ for num in nums:
 
 # get subtotal value: O(1)
 subtotal = prefix_sum[right] - prefix_sum[left - 1]
+```
+
+# linked list
+
+## runner
+
+use two pointers(fast, slow) to find center node
+
+```python
+rev = None
+slow = fast = head
+
+while fast and fast.next:
+    fast = fast.next.next
+    rev, rev.next, slow = slow, rev, slow.next
+if fast: # odd number of nodes
+    slow = slow.next # len(slow) == len(rev)
 ```
