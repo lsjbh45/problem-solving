@@ -248,3 +248,19 @@ while fast and fast.next:
 if fast: # odd number of nodes
     slow = slow.next # len(slow) == len(rev)
 ```
+
+## add unnecessary root node
+
+to manipulate the list regardless of the presence of the root node
+
+```python
+def func() -> Optional[ListNode]
+    lst: ListNode = ListNode(-1)
+
+    '''
+    while ...:
+        lst.next = ...
+    '''
+
+    return lst.next
+```
