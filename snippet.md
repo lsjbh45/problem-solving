@@ -23,22 +23,23 @@
 | `lambda`                                                                      | Lambda expression                                                                  |
 | `:=`                                                                          | Assignment expression                                                              |
 
-# numbers
+## divmod
 
-x += y
-y = x - y
-x -= y
+```python
+carry, sum = divmod(diviend, divisor) # (diviend // divisor, diviend % divisor)
+```
 
-````
 ## swap
+
 multiple assignment (== C++ std::swap())
+
 ```python
 a, b = b, a
 
 x += y
 y = x - y
 x -= y
-````
+```
 
 ## min, max
 
@@ -46,6 +47,19 @@ x -= y
 import sys
 min_value = sys.minsize # float('-inf')
 max_value = sys.maxsize # float('inf')
+```
+
+## reduce
+
+```python
+from functools import reduce
+reduce(lambda acc, cur: (acc, cur), iterable, initial)
+
+import operator
+# arithmetic: add, sub, mul, truediv
+# logical: is_, is_not, and_, or_
+# comparison: lt, le, gt, ge, eq
+reduce(operator.func, iterable, initial)
 ```
 
 # type hint
