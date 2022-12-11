@@ -23,6 +23,14 @@
 | `lambda`                                                                      | Lambda expression                                                                  |
 | `:=`                                                                          | Assignment expression                                                              |
 
+## GIL (global interpreter lock)
+
+the reason why python is slow
+
+one thread monopolizes resources
+
+fatal in a multi-core environment
+
 ## divmod
 
 ```python
@@ -171,7 +179,7 @@ internal: fixed-width encoding (based on character range)
 
 ## longest common substring
 
-dynamic programming, O(n^2)
+dynamic programming, $O(n^2)$
 
 ```python
     common_len = [[0 for _ in range(len(s))] for _ in range(len(s))]
@@ -192,17 +200,17 @@ re.sub(r'[^\w]', ' ', s) # 'a  a  a  a  b b b c  c'
 
 # sorting
 
-## sorted()
+## `sorted()`
 
 Python sorted(): use Timsort algorithm (Insertion sort + Merge sort heuristically)
 
-Best case: O(n), Average case: O(n log n), Worst case: O(n log n)
+Best case: $O(n)$, Average case: $O(n log n)$, Worst case: $O(n log n)$
 
 ```python
 sorted(iterable, key=lambda x: x, reverse=True) # iterable -> list
 ```
 
-## list.sort()
+## `list.sort()`
 
 ```python
 list.sort() # method of list, sort list itself
@@ -263,4 +271,41 @@ def func() -> Optional[ListNode]
     '''
 
     return lst.next
+```
+
+# queue
+
+## deque (double-ended queue)
+
+operations of stack adt + queue adt
+
+internally implemented with doubly linked list
+
+```python
+from collections import deque
+
+dq = deque()
+dq.appendleft()
+dq.append()
+dq.popleft()
+dq.pop()
+```
+
+## priority queue
+
+implement with heap (insertion $O(log n)$, deletion $O(log n)$)
+
+python: `heapq` module supports min heap
+
+`PriorityQueue` module is internally implemented with `heapq` module
+
+`PriorityQueue` is thread-safe, so locking overhead exists
+
+```python
+import heapq
+
+heap = []
+heapq.heappush(heap, data)
+heapq.heappop(heap)
+heapq.heapify(heap)
 ```
