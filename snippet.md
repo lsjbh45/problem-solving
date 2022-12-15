@@ -309,3 +309,18 @@ heapq.heappush(heap, data)
 heapq.heappop(heap)
 heapq.heapify(heap)
 ```
+
+## hash table
+
+hash table (hash map) is an implementation of the associated array (key-value mapping) adt
+
+hash function: maps data of any size to a fixed size value
+
+hashing: indexing hash table using hash function
+
+collision handling
+
+| method            | characteristic                                                        | programming language            |
+| ----------------- | --------------------------------------------------------------------- | ------------------------------- |
+| separate chaining | origin of hash table, easy implementation, memory allocation overhead | C++, Java, Go                   |
+| open addressing   | maximum: bucket size, clustering (sharp decline in performance)       | Python (load factor 0.66), Luby |
