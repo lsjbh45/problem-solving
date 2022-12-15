@@ -70,6 +70,40 @@ import operator
 reduce(operator.func, iterable, initial)
 ```
 
+## zip
+
+more than 2 sequences -> new tuple sequence
+
+one-to-one correspondence based on the short side
+
+```python
+a = [1, 2, 3, 4, 5]
+b = [6, 7, 8, 9]
+c = [10, 11, 12]
+
+zip(a, b) # generator
+list(zip(a, b)) # [(1, 6), (2, 7), (3, 8), (4, 9)]
+list(zip(a, b, c)) # [(1, 6, 10), (2, 7, 11), (3, 8, 12)]
+```
+
+## asterisk(\*)
+
+`*`: sequence (tuple, list) unpacking operator
+`**`: key-value mapping (dictionary) unpacking operator
+
+```python
+def f(*params):
+    return sum(params)
+
+f(1, 2, 3, 4) #10
+
+a, *b = [1, 2, 3, 4] # a = 1, b = [2, 3, 4]
+
+info = {'a': 1, 'b': 2, 'c': 3}
+new_info = {**info, 'c': 4} # {'a': 1, 'b': 2, 'c': 4}
+
+```
+
 # type hint
 
 ## composite data type
@@ -308,6 +342,9 @@ heap = []
 heapq.heappush(heap, data)
 heapq.heappop(heap)
 heapq.heapify(heap)
+
+# max heap
+heapq.heappush(heap, (-data, data))
 ```
 
 ## hash table
