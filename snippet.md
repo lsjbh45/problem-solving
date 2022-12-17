@@ -208,6 +208,8 @@ default_dict['a'].append(1) # defaultdict(<class 'list'>, {'a': [1]}
 default_dict['b'] # []
 ```
 
+should be careful about the size change during iteration
+
 ## ordered dictionary
 
 ```python
