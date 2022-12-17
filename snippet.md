@@ -57,6 +57,23 @@ min_value = sys.minsize # float('-inf')
 max_value = sys.maxsize # float('inf')
 ```
 
+## copy
+
+```python
+a = [1, 2, 3]
+
+b = a[:]
+b = a.copy()
+```
+
+nested list: deep copy
+
+```python
+import copy
+a = [[1, 2], [3, 4]]
+b = copy.deepcopy(b)
+```
+
 ## reduce
 
 ```python
@@ -106,7 +123,7 @@ new_info = {**info, 'c': 4} # {'a': 1, 'b': 2, 'c': 4}
 
 ## Nested function
 
-````python
+```python
 def outer(a: List[int], s: str):
     arr: List[int] = a
     text: str = s
@@ -124,6 +141,15 @@ def outer(a: List[int], s: str):
     inner2()
 
 outer([1, 2, 3], 'old')
+```
+
+## itertools
+
+```python
+import itertools
+
+itertools.permutations([1, 2]) # ((1, 2), (2, 1))
+```
 
 # type hint
 
@@ -133,7 +159,7 @@ outer([1, 2, 3], 'old')
 from typing import List, Dict, Tuple, Set
 def count(lst: List[Tuple[int, str]]) -> Dict[Tuple[int, str], int]:
     return Counter(lst)
-````
+```
 
 ## optional
 
