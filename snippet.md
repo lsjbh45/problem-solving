@@ -104,6 +104,27 @@ new_info = {**info, 'c': 4} # {'a': 1, 'b': 2, 'c': 4}
 
 ```
 
+## Nested function
+
+````python
+def outer(a: List[int], s: str):
+    arr: List[int] = a
+    text: str = s
+
+    def inner1():
+        a.append(4) # manipulation
+        text = 'new' # local reallocation
+        print(arr, text) # [1, 2, 3, 4], 'new'
+
+    def inner2():
+        print(arr, text) # [1, 2, 3, 4], 'old'
+
+    print(arr, text) # [1, 2, 3]
+    inner1()
+    inner2()
+
+outer([1, 2, 3], 'old')
+
 # type hint
 
 ## composite data type
@@ -112,7 +133,7 @@ new_info = {**info, 'c': 4} # {'a': 1, 'b': 2, 'c': 4}
 from typing import List, Dict, Tuple, Set
 def count(lst: List[Tuple[int, str]]) -> Dict[Tuple[int, str], int]:
     return Counter(lst)
-```
+````
 
 ## optional
 
@@ -347,7 +368,7 @@ heapq.heapify(heap)
 heapq.heappush(heap, (-data, data))
 ```
 
-## hash table
+# hash table
 
 hash table (hash map) is an implementation of the associated array (key-value mapping) adt
 
@@ -355,9 +376,39 @@ hash function: maps data of any size to a fixed size value
 
 hashing: indexing hash table using hash function
 
-collision handling
+## collision handling
 
 | method            | characteristic                                                        | programming language            |
 | ----------------- | --------------------------------------------------------------------- | ------------------------------- |
 | separate chaining | origin of hash table, easy implementation, memory allocation overhead | C++, Java, Go                   |
 | open addressing   | maximum: bucket size, clustering (sharp decline in performance)       | Python (load factor 0.66), Luby |
+
+# graph
+
+## traveling salesman problem
+
+Eulerian trail: visit all edges once.
+
+Hamiltonian trail: visit all vertices once. NP-complete.
+
+Hamiltonian cycle: visit all vertices once, return to starting point. NP-complete.
+
+travelling salesman problem (TSP): a Hamiltonian cycle with the least weight. NP-hard. $O(n^2 2^n)$ with dp.
+
+-> decision version (where given L, decide whether the graph has a tour of at most L): NP-complete.
+
+## graph representation
+
+adjacency matrix
+
+adjacency list
+
+## graph traversal
+
+dfs: mainly used for exploring all the possible cases. implemented by recursion, stack.
+
+bfs: mainly used for shortest path problem. implemented by queue.
+
+backtracking: check promising, pruning unnecessary parts. method of exploring in a way such as dfs.
+
+constraint satisfaction problem (CSP): problem of finding states that satisfy constraints. optimized by backtracking.

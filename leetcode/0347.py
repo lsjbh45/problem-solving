@@ -1,5 +1,5 @@
-# 3. Longest Substring Without Repeating Characters
-# Link: https://leetcode.com/problems/longest-substring-without-repeating-characters/
+# 347. Top K Frequent Elements
+# Link: https://leetcode.com/problems/top-k-frequent-elements/description/
 # Difficulty: Medium
 # Category: Array
 # Category: Hash Table
