@@ -440,3 +440,34 @@ bfs: mainly used for shortest path problem. implemented by queue.
 backtracking: check promising, pruning unnecessary parts. method of exploring in a way such as dfs.
 
 constraint satisfaction problem (CSP): problem of finding states that satisfy constraints. optimized by backtracking.
+
+# shortest path problem
+
+## Dijkstra algorithm
+
+single-source shortest paths of directed graphs with nonnegative weights
+
+time complexity: $O(V^2)$ with list, $O((V+E)log(V))$ with priority queue
+
+```python
+def dijkstra(graph: Dict[int, List[Tuple[int, int]]],
+             start: int) -> Dict[int, int]:
+    dists: Dict[int, int] = {u: sys.maxsize for u in graph}
+    dists[start] = 0
+
+    pq: List[Tuple[int, int]] = []
+    heapq.heappush(pq, (dists[k], k))
+
+    while pq:
+        dist, node = heapq.heappop(pq)
+
+        if dist > dists[node]:
+            continue
+
+        for target, weight in graph[node]:
+            if dist + weight < dists[target]:
+                dists[target] = dist + weight
+                heapq.heappush(pq, (dists[target], target))
+
+    return dists
+```
