@@ -471,3 +471,37 @@ def dijkstra(graph: Dict[int, List[Tuple[int, int]]],
 
     return dists
 ```
+
+# tree
+
+- tree: abstract data type that represents a hierarchical tree structure
+
+  - one root node without parent exists, all other child node has exactly one parent node (!= mathematical terminology)
+
+  - recursively defined, self-referential: each child can be treated like the root node of its own subtree
+
+  - special form of graph: one type of directed asyclic graph (whose undirected version is also asyclic)
+
+- terminology
+
+  - degree: for a given node, its number of children. a leaf has necessarily degree zero
+
+  - depth: the length of the unique path to the root node
+
+  - height: the length of the longest downward path to a leaf node
+
+  - level: a set of nodes with a specific depth when using zero-based counting
+
+  - width: the number of nodes in a level
+
+  - size: the number of all child nodes, including itself
+
+# binary tree
+
+- binary tree: m-ary tree when m = 2. each node has less than 2 children (degree <= 2).
+
+  - full binary tree: a tree every node has either 0 or 2 children
+
+  - complete binary tree: a binary tree in which every level, except possibly the last, is completely filled, and all nodes in the last level are as far left as possible
+
+  - perfect binary tree: a binary tree in which all interior nodes have two children and all leaves have the same depth or same level
