@@ -48,7 +48,3 @@ class Solution2:
                     q.append(sub_root.right)
 
         return depth
-
-
-print(Solution1().maxDepth(TreeNode(3, TreeNode(
-    9), TreeNode(20, TreeNode(15), TreeNode(7)))))
