@@ -23,6 +23,17 @@
 | `lambda`                                                                      | Lambda expression                                                                  |
 | `:=`                                                                          | Assignment expression                                                              |
 
+## short-circuit evaluation
+
+short-circuit operator `and`, `or` evaluates boolean conditions lazily
+
+```python
+1 and x # x
+0 and x # 0 (x won't even be evaluated)
+1 or x  # 1 (x won't even be evaluated)
+0 or x  # x
+```
+
 ## GIL (global interpreter lock)
 
 the reason why python is slow
