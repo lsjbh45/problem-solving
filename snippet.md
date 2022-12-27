@@ -438,23 +438,23 @@ travelling salesman problem (TSP): a Hamiltonian cycle with the least weight. NP
 
 ## graph representation
 
-adjacency matrix
+- adjacency matrix
 
-adjacency list
+- adjacency list
 
 ## graph traversal
 
-dfs: mainly used for exploring all the possible cases. implemented by recursion, stack.
+- dfs: mainly used for exploring all the possible cases. implemented by recursion, stack.
 
-bfs: mainly used for shortest path problem. implemented by queue.
+- bfs: mainly used for shortest path problem. implemented by queue.
 
-backtracking: check promising, pruning unnecessary parts. method of exploring in a way such as dfs.
+- backtracking: check promising, pruning unnecessary parts. method of exploring in a way such as dfs.
 
-constraint satisfaction problem (CSP): problem of finding states that satisfy constraints. optimized by backtracking.
+- constraint satisfaction problem (CSP): problem of finding states that satisfy constraints. optimized by backtracking.
 
-# shortest path problem
+## shortest path problem
 
-## Dijkstra algorithm
+### Dijkstra algorithm
 
 single-source shortest paths of directed graphs with nonnegative weights
 
@@ -483,6 +483,37 @@ def dijkstra(graph: Dict[int, List[Tuple[int, int]]],
     return dists
 ```
 
+## topological sort
+
+a linear ordering of vertices such that for every directed edge from u to v, u comes before v in the ordering
+
+possible if and only if the graph is directed acyclic graph (DAG)
+
+linear time `O(V+E)` with adjacency list
+
+```python
+def bfsTopologicalSort(graph: Dict[int, Set[int]]) -> List[int]:
+    degrees: Dict[int, int] = {n: 0 for n in graph.keys()}
+    for adjs in graph.values():
+        for adj in adjs:
+            degrees[adj] += 1
+
+    q = deque([n for n, d in degrees.items() if not d])
+    topological = []
+
+    while q:
+        n = q.popleft()
+        topological.append(n)
+
+        for adj in graph[n]:
+            if degrees[adj]:
+                degrees[adj] -= 1
+                if not degrees[adj]:
+                    q.append(adj)
+
+    return topological
+```
+
 # tree
 
 - tree: abstract data type that represents a hierarchical tree structure
@@ -507,7 +538,7 @@ def dijkstra(graph: Dict[int, List[Tuple[int, int]]],
 
   - size: the number of all child nodes, including itself
 
-# binary tree
+## binary tree
 
 - binary tree: m-ary tree when m = 2. each node has less than 2 children (degree <= 2).
 
