@@ -547,3 +547,11 @@ def bfsTopologicalSort(graph: Dict[int, Set[int]]) -> List[int]:
   - complete binary tree: a binary tree in which every level, except possibly the last, is completely filled, and all nodes in the last level are as far left as possible
 
   - perfect binary tree: a binary tree in which all interior nodes have two children and all leaves have the same depth or same level
+
+- binary search tree (BST): sorted binary tree. value of each node is greater than the node values of the left subtree and less than node values of the right subtree
+
+  - allows binary search for fast lookup, addition, and removal: average $O(log n)$, worst $O(n)$
+
+  - self-balancing BST: BST that automatically keeps its height small in the face of arbitrary item insertions and deletions
+
+  - height-balanced BST: BST that the height is defined to be logarithmic $O(log n)$ (i.e. AVL trees, red-black tree)
