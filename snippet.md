@@ -555,3 +555,11 @@ def bfsTopologicalSort(graph: Dict[int, Set[int]]) -> List[int]:
   - self-balancing BST: BST that automatically keeps its height small in the face of arbitrary item insertions and deletions
 
   - height-balanced BST: BST that the height is defined to be logarithmic $O(log n)$ (i.e. AVL trees, red-black tree)
+
+- order of binary tree traversal in depth-first search
+
+  - pre-order traversal: NLR(node-left-right)
+
+  - in-order traversal: LNR(left-node-right)
+
+  - post-order traversal: LRN(left-right-node)
