@@ -178,6 +178,17 @@ def count(lst: List[Tuple[int, str]]) -> Dict[Tuple[int, str], int]:
 data: Optional[Type] = None # Type | None
 ```
 
+## static method
+
+```python
+class Class:
+    @staticmethod
+    def static_method(...): # without 'self'
+        pass
+
+Class.static_method(...) # type: function
+```
+
 # list
 
 dynamic array (== C++ std::vector, Java ArrayList) + various type (characteristic of linked list)
