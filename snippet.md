@@ -405,6 +405,9 @@ heapq.heapify(heap)
 
 # max heap
 heapq.heappush(heap, (-data, data))
+
+# kth largest
+heapq.nlargest(k, data)[-1]
 ```
 
 # hash table
@@ -563,3 +566,15 @@ def bfsTopologicalSort(graph: Dict[int, Set[int]]) -> List[int]:
   - in-order traversal: LNR(left-node-right)
 
   - post-order traversal: LRN(left-right-node)
+
+## heap
+
+- heap: tree-based data structure which is a complete tree that satisfies the heap property
+
+  - heap property: in a max (min) heap, for any given node, then the value of parent node is greater (less) than or equal to the value of that node
+
+  - the highest (lowest) priority element is always stored at the root; efficient implementation of priority queue ADT
+
+  - heap is not a sorted structure; partially ordered only for the hierarchial relationship
+
+- binary heap: heap data structure that takes the form of a binary tree. introduced for heapsort algorithm. commonly implemented with an array
