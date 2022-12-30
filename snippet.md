@@ -541,6 +541,10 @@ def bfsTopologicalSort(graph: Dict[int, Set[int]]) -> List[int]:
 
   - size: the number of all child nodes, including itself
 
+- trie (prefix tree): a type of k-ary search tree; a tree used for locating specific keys from within a set
+
+  - the keys are most often strings, with links between nodes defined by individual characters
+
 ## binary tree
 
 - binary tree: m-ary tree when m = 2. each node has less than 2 children (degree <= 2).
