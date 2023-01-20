@@ -450,6 +450,17 @@ sorted(iterable, key=lambda x: x, reverse=True) # iterable -> list
 list.sort() # method of list, sort list itself
 ```
 
+## sorting with custom comparator
+
+```python
+from functools import cmp_to_key
+
+def cmp(a, b) -> int:
+    return 1 if a > b else 0 if a == b else -1
+
+data.sort(key=cmp_to_key(self.cmp))
+```
+
 # array
 
 ## prefix sum
