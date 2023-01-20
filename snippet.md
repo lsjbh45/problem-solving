@@ -114,7 +114,7 @@ list(zip(a, b)) # [(1, 6), (2, 7), (3, 8), (4, 9)]
 list(zip(a, b, c)) # [(1, 6, 10), (2, 7, 11), (3, 8, 12)]
 ```
 
-## asterisk(\*)
+## asterisk operator (`*`)
 
 `*`: sequence (tuple, list) unpacking operator
 `**`: key-value mapping (dictionary) unpacking operator
@@ -130,6 +130,18 @@ a, *b = [1, 2, 3, 4] # a = 1, b = [2, 3, 4]
 info = {'a': 1, 'b': 2, 'c': 3}
 new_info = {**info, 'c': 4} # {'a': 1, 'b': 2, 'c': 4}
 
+```
+
+## comma operator (`,`)
+
+if comma operator is used for `+=` operation of list, it makes the result of the operation to be a nested list instead of concatenation
+
+```python
+a = [1]
+b = [2, 3] # tuple ([2, 3],)
+a += b # [1, 2, 3] (concatenation)
+a += b, # [1, [2, 3]] (nested list)
+a += [b] # [1, [2, 3]] (nested list)
 ```
 
 ## Nested function
