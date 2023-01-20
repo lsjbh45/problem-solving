@@ -305,19 +305,136 @@ re.sub(r'[^\w]', ' ', s) # 'a  a  a  a  b b b c  c'
 
 # sorting
 
-## `sorted()`
+| algorithm      | best       | average    | worst      | space     | stable | notes                                    |
+| -------------- | ---------- | ---------- | ---------- | --------- | ------ | ---------------------------------------- |
+| Bubble sort    | $O(n^2)$   | $O(n^2)$   | $O(n^2)$   | $O(1)$    | Yes    |                                          |
+| Insertion sort | $O(n)$     | $O(n^2)$   | $O(n^2)$   | $O(1)$    | Yes    | efficient for small data sets            |
+| Selection sort | $O(n^2)$   | $O(n^2)$   | $O(n^2)$   | $O(1)$    | No     |                                          |
+| Quicksort      | $O(nlogn)$ | $O(nlogn)$ | $O(n^2)$   | $O(logn)$ | No     | fastest on average with $O(nlogn)$       |
+| Merge sort     | $O(nlogn)$ | $O(nlogn)$ | $O(nlogn)$ | $O(n)$    | Yes    |                                          |
+| Heapsort       | $O(nlogn)$ | $O(nlogn)$ | $O(nlogn)$ | $O(1)$    | No     |                                          |
+| Timsort        | $O(n)$     | $O(nlogn)$ | $O(nlogn)$ | $O(n)$    | Yes    | Insertion + Merge heuristically          |
+| Counting sort  | $O(n)$     | $O(n)$     | $O(n)$     | $O(n)$    | Yes    | efficient for data sets with duplication |
+| Radix sort     | $O(n)$     | $O(n)$     | $O(n)$     | $O(n)$    | Yes    | efficient for large lists of numbers     |
 
-Python sorted(): use Timsort algorithm (Insertion sort + Merge sort heuristically)
+```python
+def bubblesort(data: List[int]) -> List[int]:
+    for i in range(len(data)):
+        for j in range(len(data) - i - 1):
+            if data[j] > data[j + 1]:
+                data[j], data[j + 1] = data[j + 1], data[j]
+    return data
 
-Best case: $O(n)$, Average case: $O(n log n)$, Worst case: $O(n log n)$
+def insertionsort(data: List[int]) -> List[int]:
+    for i in range(1, len(data)):
+        j = i
+        while j > 0 and data[j - 1] > data[j]:
+            data[j - 1], data[j] = data[j], data[j - 1]
+            j -= 1
+    return data
+
+def selectionsort(data: List[int]) -> List[int]:
+    for i in range(len(data)):
+        idx = i
+        for j in range(i, len(data)):
+            if data[j] < data[idx]:
+                idx = j
+        data[i], data[idx] = data[idx], data[i]
+    return data
+
+def quicksort(data: List[int]) -> List[int]:
+    def partition(low: int, high: int) -> int:
+        pivot = data[high]
+        left = low
+        for right in range(low, high):
+            if data[right] < pivot:
+                data[left], data[right] = data[right], data[left]
+                left += 1
+        data[left], data[high] = data[high], data[left]
+        return left
+
+    def sort(low: int, high: int):
+        if low < high:
+            pivot = partition(low, high)
+            sort(low, pivot - 1)
+            sort(pivot + 1, high)
+
+    sort(0, len(data) - 1)
+    return data
+
+def mergesort(data: List[int]) -> List[int]:
+    if len(data) <= 1:
+        return data
+
+    mid = len(data) // 2
+    left_list = data[:mid]
+    right_list = data[mid:]
+
+    left_list = mergesort(left_list)
+    right_list = mergesort(right_list)
+
+    result = []
+    left_index = right_index = 0
+    while left_index < len(left_list) and right_index < len(right_list):
+        if left_list[left_index] < right_list[right_index]:
+            result.append(left_list[left_index])
+            left_index += 1
+        else:
+            result.append(right_list[right_index])
+            right_index += 1
+    result += left_list[left_index:]
+    result += right_list[right_index:]
+
+    return result
+
+def heapsort(data: List[int]) -> List[int]:
+    def heapify(data, index, size):
+        largest = index
+        left, right = 2 * index + 1, 2 * index + 2
+        if left < size and data[left] > data[largest]:
+            largest = left
+        if right < size and data[right] > data[largest]:
+            largest = right
+        if largest != index:
+            data[largest], data[index] = data[index], data[largest]
+            heapify(data, largest, size)
+
+    for i in range(len(data) // 2 - 1, -1, -1):
+        heapify(data, i, len(data))
+
+    for i in range(len(data) - 1, 0, -1):
+        data[i], data[0] = data[0], data[i]
+        heapify(data, 0, i)
+
+    return data
+
+def radixsort(data: List[int]) -> List[int]:
+    buckets = [deque() for _ in range(10)]
+    queue = deque(data)
+
+    max_val = max(data)
+    exponent = 0
+
+    while max_val >= 10 ** exponent:
+        while queue:
+            num = queue.popleft()
+            bucket = (num // 10 ** exponent) % 10
+            buckets[bucket].append(num)
+        for bucket in buckets:
+            while bucket:
+                queue.append(bucket.popleft())
+        exponent += 1
+
+    return list(queue)
+```
+
+## python sorting
+
+use Timsort algorithm
 
 ```python
 sorted(iterable, key=lambda x: x, reverse=True) # iterable -> list
-```
 
-## `list.sort()`
-
-```python
 list.sort() # method of list, sort list itself
 ```
 
