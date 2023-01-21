@@ -205,32 +205,32 @@ Class.static_method(...) # type: function
 
 dynamic array (== C++ std::vector, Java ArrayList) + various type (characteristic of linked list)
 
-| Operation      | Time       |
-| -------------- | ---------- |
-| len(a)         | O(1)       |
-| a[i]           | O(1)       |
-| a[i:j]         | O(k)       |
-| elem in a      | O(n)       |
-| a.count(elem)  | O(n)       |
-| a.index(elem)  | O(n)       |
-| a.append(elem) | O(1)       |
-| a.pop()        | O(1)       |
-| a.pop(i)       | O(n)       |
-| del a[i]       | O(n)       |
-| a.sort()       | O(n log n) |
-| min(a), max(a) | O(n)       |
-| a.reverse()    | O(n)       |
+| Operation      | Time         |
+| -------------- | ------------ |
+| len(a)         | $O(1)$       |
+| a[i]           | $O(1)$       |
+| a[i:j]         | $O(k)$       |
+| elem in a      | $O(n)$       |
+| a.count(elem)  | $O(n)$       |
+| a.index(elem)  | $O(n)$       |
+| a.append(elem) | $O(1)$       |
+| a.pop()        | $O(1)$       |
+| a.pop(i)       | $O(n)$       |
+| del a[i]       | $O(n)$       |
+| a.sort()       | $O(n\log n)$ |
+| min(a), max(a) | $O(n)$       |
+| a.reverse()    | $O(n)$       |
 
 # dictionary
 
 key-value hash table (== C++ std::unordered_map, Java HashMap)
 
-| Operation      | Time |
-| -------------- | ---- |
-| len(a)         | O(1) |
-| a[key]         | O(1) |
-| a[key] = value | O(1) |
-| key in a       | O(1) |
+| Operation      | Time   |
+| -------------- | ------ |
+| len(a)         | $O(1)$ |
+| a[key]         | $O(1)$ |
+| a[key] = value | $O(1)$ |
+| key in a       | $O(1)$ |
 
 ## default dictionary
 
@@ -317,17 +317,17 @@ re.sub(r'[^\w]', ' ', s) # 'a  a  a  a  b b b c  c'
 
 # sorting
 
-| algorithm      | best       | average    | worst      | space     | stable | notes                                    |
-| -------------- | ---------- | ---------- | ---------- | --------- | ------ | ---------------------------------------- |
-| Bubble sort    | $O(n^2)$   | $O(n^2)$   | $O(n^2)$   | $O(1)$    | Yes    |                                          |
-| Insertion sort | $O(n)$     | $O(n^2)$   | $O(n^2)$   | $O(1)$    | Yes    | efficient for small data sets            |
-| Selection sort | $O(n^2)$   | $O(n^2)$   | $O(n^2)$   | $O(1)$    | No     |                                          |
-| Quicksort      | $O(nlogn)$ | $O(nlogn)$ | $O(n^2)$   | $O(logn)$ | No     | fastest on average with $O(nlogn)$       |
-| Merge sort     | $O(nlogn)$ | $O(nlogn)$ | $O(nlogn)$ | $O(n)$    | Yes    |                                          |
-| Heapsort       | $O(nlogn)$ | $O(nlogn)$ | $O(nlogn)$ | $O(1)$    | No     |                                          |
-| Timsort        | $O(n)$     | $O(nlogn)$ | $O(nlogn)$ | $O(n)$    | Yes    | Insertion + Merge heuristically          |
-| Counting sort  | $O(n)$     | $O(n)$     | $O(n)$     | $O(n)$    | Yes    | efficient for data sets with duplication |
-| Radix sort     | $O(n)$     | $O(n)$     | $O(n)$     | $O(n)$    | Yes    | efficient for large lists of numbers     |
+| algorithm      | best         | average      | worst        | space       | stable | notes                                    |
+| -------------- | ------------ | ------------ | ------------ | ----------- | ------ | ---------------------------------------- |
+| Bubble sort    | $O(n^2)$     | $O(n^2)$     | $O(n^2)$     | $O(1)$      | Yes    |                                          |
+| Insertion sort | $O(n)$       | $O(n^2)$     | $O(n^2)$     | $O(1)$      | Yes    | efficient for small data sets            |
+| Selection sort | $O(n^2)$     | $O(n^2)$     | $O(n^2)$     | $O(1)$      | No     |                                          |
+| Quicksort      | $O(n\log n)$ | $O(n\log n)$ | $O(n^2)$     | $O(\log n)$ | No     | fastest on average with $O(n\log n)$     |
+| Merge sort     | $O(n\log n)$ | $O(n\log n)$ | $O(n\log n)$ | $O(n)$      | Yes    |                                          |
+| Heapsort       | $O(n\log n)$ | $O(n\log n)$ | $O(n\log n)$ | $O(1)$      | No     |                                          |
+| Timsort        | $O(n)$       | $O(n\log n)$ | $O(n\log n)$ | $O(n)$      | Yes    | Insertion + Merge heuristically          |
+| Counting sort  | $O(n)$       | $O(n)$       | $O(n)$       | $O(n)$      | Yes    | efficient for data sets with duplication |
+| Radix sort     | $O(n)$       | $O(n)$       | $O(n)$       | $O(n)$      | Yes    | efficient for large lists of numbers     |
 
 ```python
 def bubblesort(data: List[int]) -> List[int]:
@@ -494,6 +494,23 @@ def three_way_partition(data, pivot):
             mid = mid + 1
 ```
 
+# searching
+
+## binary search
+
+a search algorithm that finds the position of a target value within a sorted array
+
+runs in logarithmic time $O(\log n)$ in the worst case
+
+```python
+# using bisect module
+import bisect
+
+def binarysearch(nums, target):
+    index = bisect.bisect_left(nums, target)
+    return index if index < len(nums) and nums[index] == target else -1
+```
+
 # array
 
 ## prefix sum
@@ -571,7 +588,7 @@ dq.pop()
 
 ## priority queue
 
-implement with heap (insertion $O(log n)$, deletion $O(log n)$)
+implement with heap (insertion $O(\log n)$, deletion $O(\log n)$)
 
 python: `heapq` module supports min heap
 
@@ -645,7 +662,7 @@ travelling salesman problem (TSP): a Hamiltonian cycle with the least weight. NP
 
 single-source shortest paths of directed graphs with nonnegative weights
 
-time complexity: $O(V^2)$ with list, $O((V+E)log(V))$ with priority queue
+time complexity: $O(V^2)$ with list, $O((V+E)\log (V))$ with priority queue
 
 ```python
 def dijkstra(graph: Dict[int, List[Tuple[int, int]]],
@@ -690,7 +707,7 @@ def bfsTopologicalSort(graph: Dict[int, Set[int]]) -> List[int]:
 
     while q:
         n = q.popleft()
-        topological.append(n)
+        topo\log ical.append(n)
 
         for adj in graph[n]:
             if degrees[adj]:
@@ -741,11 +758,11 @@ def bfsTopologicalSort(graph: Dict[int, Set[int]]) -> List[int]:
 
 - binary search tree (BST): sorted binary tree. value of each node is greater than the node values of the left subtree and less than node values of the right subtree
 
-  - allows binary search for fast lookup, addition, and removal: average $O(log n)$, worst $O(n)$
+  - allows binary search for fast lookup, addition, and removal: average $O(\log n)$, worst $O(n)$
 
   - self-balancing BST: BST that automatically keeps its height small in the face of arbitrary item insertions and deletions
 
-  - height-balanced BST: BST that the height is defined to be logarithmic $O(log n)$ (i.e. AVL trees, red-black tree)
+  - height-balanced BST: BST that the height is defined to be \log arithmic $O(\log n)$ (i.e. AVL trees, red-black tree)
 
 - order of binary tree traversal in depth-first search
 
