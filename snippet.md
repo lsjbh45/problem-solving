@@ -420,6 +420,21 @@ def heapsort(data: List[int]) -> List[int]:
 
     return data
 
+def countingsort(data: List[int]) -> List[int]:
+    count = {}
+    for num in data:
+        if num not in count:
+            count[num] = 0
+        count[num] += 1
+
+    result = []
+    for num in range(1, max(arr) + 1):
+        if num in count:
+            for _ in range(count[num]):
+                result.append(num)
+
+    return result
+
 def radixsort(data: List[int]) -> List[int]:
     buckets = [deque() for _ in range(10)]
     queue = deque(data)
@@ -459,6 +474,24 @@ def cmp(a, b) -> int:
     return 1 if a > b else 0 if a == b else -1
 
 data.sort(key=cmp_to_key(self.cmp))
+```
+
+## dutch national flag algorithm
+
+improve quick sort by three-way partitioning if the data contains many duplicated elements
+
+```python
+def three_way_partition(data, pivot):
+    start, mid, end = 0, 0, len(data) - 1
+    while mid <= end:
+        if data[mid] < pivot:
+            data[start], data[mid] = data[mid], data[start]
+            start, mid = start + 1, mid + 1
+        elif data[mid] > pivot:
+            data[mid], data[end] = data[end], data[mid]
+            end = end - 1
+        else:
+            mid = mid + 1
 ```
 
 # array
@@ -733,3 +766,7 @@ def bfsTopologicalSort(graph: Dict[int, Set[int]]) -> List[int]:
   - heap is not a sorted structure; partially ordered only for the hierarchial relationship
 
 - binary heap: heap data structure that takes the form of a binary tree. introduced for heapsort algorithm. commonly implemented with an array
+
+```
+
+```
