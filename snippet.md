@@ -174,6 +174,13 @@ import itertools
 itertools.permutations([1, 2]) # ((1, 2), (2, 1))
 ```
 
+## any, all
+
+```python
+any(iterable) # logical OR
+all(iterable) # logical AND
+```
+
 # type hint
 
 ## composite data type
