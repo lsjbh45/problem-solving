@@ -507,7 +507,10 @@ runs in logarithmic time $O(\log n)$ in the worst case
 import bisect
 
 def binarysearch(nums, target):
-    index = bisect.bisect_left(nums, target)
+    # bisect_left: returns the position where the value is to be inserted in the sorted array.
+    # if the value already exists in the array, returns the position before the existing item.
+    # lo, hi specify the boundary of the list to consider (use instead of slicing)
+    index = bisect.bisect_left(nums, target, lo, hi)
     return index if index < len(nums) and nums[index] == target else -1
 ```
 
