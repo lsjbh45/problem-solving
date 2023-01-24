@@ -34,6 +34,38 @@ short-circuit operator `and`, `or` evaluates boolean conditions lazily
 0 or x  # x
 ```
 
+## bit manipulation
+
+- bitwise operator
+
+  - `&`: bitwise AND
+
+  - `|`: bitwise OR
+
+  - `^`: bitwise XOR
+
+  - `~`: bitwise NOT (1's complement, `~x = -x - 1`) != negative number (2's complement, -x = `~x + 1`)
+
+  - bitwise NOT with digit limit: `x ^ MASK` (XOR with bit mask with a maximum value of digits) (== C++ `std::bitset<n>(~x)`)
+
+  - `>>`, `<<`: shift
+
+- base n representation of python
+
+  - binary, octal, hexadecimal representation: `0b`, `0o`, `0x`
+
+  - numbers in python based on the decimal number system; other notations automatically converted into a decimal number
+
+  - converting from decimal number to non-decimal string (stringified number): `bin()`, `oct()`, `hex()`
+
+  - converting from non-decimal string to decimal number: `int(string, base)`
+
+- internal representation of python
+
+  - supports arbitrary precision; has a sign as a separate field, converts number to a 2's complement only when a bit operation is necessary
+
+  - when representing a negative stringified number, a positive integer representation is expressed by adding a sign to it
+
 ## GIL (global interpreter lock)
 
 the reason why python is slow
