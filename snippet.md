@@ -86,10 +86,18 @@ multiple assignment (== C++ std::swap())
 
 ```python
 a, b = b, a
+```
 
+without temporary variable
+
+```python
 x += y
 y = x - y
 x -= y
+
+x = x ^ y
+y = x ^ y
+x = x ^ y
 ```
 
 ## min, max

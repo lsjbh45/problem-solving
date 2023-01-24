@@ -25,7 +25,7 @@ class Solution1:
         return r
 
 
-# Solution 2: bit manipulation, bit shifting
+# Solution 2: bit manipulation, bit shifting, binary number
 # Time: 36 ms
 # Memory: 13.9 MB
 class Solution2:
