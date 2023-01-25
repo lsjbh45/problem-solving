@@ -834,6 +834,24 @@ def bfsTopologicalSort(graph: Dict[int, Set[int]]) -> List[int]:
 
 - binary heap: heap data structure that takes the form of a binary tree. introduced for heapsort algorithm. commonly implemented with an array
 
-```
+# algorithms
 
-```
+## greedy algorithm
+
+- greedy algorithm: algorithm that follows the problem-solving heuristic of making the locally optimal choice at each stage
+
+- solution for problems with two properties: greedy choice property + optimal substructure
+
+  - greedy choice property: can make the choice seems best at the moment; the decisions made so far does not be reconsidered at the choice
+
+  - optimal substructure: an optimal solution to the problem contains optimal solutions to the sub-problems
+
+- typical problems
+
+  - dijkstra algorithm (both greedy algorithm, dynamic programming)
+
+  - huffman coding
+
+  - fractional knapsack problem (0-1 knapsack problem: by dynamic programming)
+
+  - coin-change problem if the face value is a multiple of the previous face value (else, cannot be solved by greedy algorithm)
