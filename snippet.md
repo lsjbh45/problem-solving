@@ -306,6 +306,8 @@ counter = Counter([(1, 'a'), (1, 'b'), (1, 'a')]) # {((1, 'a'), 2), ((1, 'b'), 1
 counter[(1, 'a')] += 1 # {((1, 'a'), 3), ((1, 'b'), 1)}
 counter = counter + Counter([(2, 'a')]) # {((1, 'a'), 3), ((1, 'b'), 1), ((2, 'a'), 1)}
 counter.most_common(2) # [((1, 'a'), 3), ((1, 'b'), 1)]
+counter.subtract((1, 'b')) # [((1, 'a'), 3), ((1, 'b'), 0)]
+counter += Counter() # [((1, 'a'), 3)]
 ```
 
 ## key of max value
