@@ -857,3 +857,11 @@ def bfsTopologicalSort(graph: Dict[int, Set[int]]) -> List[int]:
   - fractional knapsack problem (0-1 knapsack problem: by dynamic programming)
 
   - coin-change problem if the face value is a multiple of the previous face value (else, cannot be solved by greedy algorithm)
+
+## divide and conquer
+
+- divide and conquer: divide into sub-problems of the same type until simple enough, conquer the smallest sub-problems, combine the solutions of sub-problems
+
+- solution for optimal substructure
+
+- typical problems: merge sort
