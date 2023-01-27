@@ -325,6 +325,10 @@ max(di, key=di.get) # 'c'
 
 # string
 
+## `eval()`
+
+parse string to the python expression, and then evaluate the expression
+
 ## check alphanumeric
 
 ```python
