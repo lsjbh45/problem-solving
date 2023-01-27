@@ -842,15 +842,23 @@ def bfsTopologicalSort(graph: Dict[int, Set[int]]) -> List[int]:
 
 # algorithms
 
+## divide and conquer
+
+- divide and conquer: divide into sub-problems of the same type until simple enough, conquer the smallest sub-problems, combine the solutions of sub-problems
+
+- solution for problems with property: optimal substructure
+
+  - optimal substructure: an optimal solution to the problem contains optimal solutions to the sub-problems
+
+- typical problems: merge sort, quick sort
+
 ## greedy algorithm
 
 - greedy algorithm: algorithm that follows the problem-solving heuristic of making the locally optimal choice at each stage
 
-- solution for problems with two properties: greedy choice property + optimal substructure
+- solution for problems with two properties: optimal substructure + greedy choice property
 
   - greedy choice property: can make the choice seems best at the moment; the decisions made so far does not be reconsidered at the choice
-
-  - optimal substructure: an optimal solution to the problem contains optimal solutions to the sub-problems
 
 - typical problems
 
@@ -862,10 +870,37 @@ def bfsTopologicalSort(graph: Dict[int, Set[int]]) -> List[int]:
 
   - coin-change problem if the face value is a multiple of the previous face value (else, cannot be solved by greedy algorithm)
 
-## divide and conquer
+## dynamic programming
 
-- divide and conquer: divide into sub-problems of the same type until simple enough, conquer the smallest sub-problems, combine the solutions of sub-problems
+- dynamic programming: break into sub-problems and then recursively find the optimal solutions to the sub-problems
 
-- solution for optimal substructure
+- solution for problems with two properties: optimal substructure + overlapping subproblems
 
-- typical problems: merge sort
+  - overlapping subproblems: problem can be broken down into subproblems which are reused several times
+
+- typical problems
+
+  - dijkstra algorithm (both greedy algorithm, dynamic programming)
+
+  - 0-1 knapsack problem (fractional knapsack problem: by greedy algorithm)
+
+  - fibonacci problem
+
+- approaches: bottom-up approach (tabulate, eager-evaluation) / top-down approach (memoization, lazy evaluation)
+
+### 0-1 knapsack problem
+
+```python
+def knapsack(W, wt, val, n):
+    K = [[0 for x in range(W + 1)] for x in range(n + 1)]
+    for i in range(n + 1):
+        for w in range(W + 1):
+            if i == 0 or w == 0:
+                K[i][w] = 0
+            else:
+                if wt[i-1] <= w:
+                    K[i][w] = max(val[i-1] + K[i-1][w-wt[i-1]], K[i-1][w])
+                else:
+                    K[i][w] = K[i-1][w]
+    return K[n][W]
+```
