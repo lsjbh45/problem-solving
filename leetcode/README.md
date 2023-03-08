@@ -1,46 +1,46 @@
 | Category | Problems |
 | --- | --- |
-| Array | [\0001.py](\0001.py) [\0015.py](\0015.py) [\0033.py](\0033.py) [\0039.py](\0039.py) [\0042.py](\0042.py) [\0046.py](\0046.py) [\0049.py](\0049.py) [\0053.py](\0053.py) [\0056.py](\0056.py) [\0075.py](\0075.py) [\0078.py](\0078.py) [\0105.py](\0105.py) [\0108.py](\0108.py) [\0121.py](\0121.py) [\0122.py](\0122.py) [\0134.py](\0134.py) [\0136.py](\0136.py) [\0167.py](\0167.py) [\0169.py](\0169.py) [\0179.py](\0179.py) [\0198.py](\0198.py) [\0200.py](\0200.py) [\0215.py](\0215.py) [\0238.py](\0238.py) [\0239.py](\0239.py) [\0240.py](\0240.py) [\0336.py](\0336.py) [\0347.py](\0347.py) [\0349.py](\0349.py) [\0393.py](\0393.py) [\0406.py](\0406.py) [\0455.py](\0455.py) [\0561.py](\0561.py) [\0621.py](\0621.py) [\0622.py](\0622.py) [\0641.py](\0641.py) [\0704.py](\0704.py) [\0706.py](\0706.py) [\0739.py](\0739.py) [\0937.py](\0937.py) [\0973.py](\0973.py) [\tets\0001.py](\tets\0001.py) |
-| Hash Table | [\0001.py](\0001.py) [\0003.py](\0003.py) [\0017.py](\0017.py) [\0049.py](\0049.py) [\0076.py](\0076.py) [\0105.py](\0105.py) [\0169.py](\0169.py) [\0208.py](\0208.py) [\0242.py](\0242.py) [\0336.py](\0336.py) [\0347.py](\0347.py) [\0349.py](\0349.py) [\0424.py](\0424.py) [\0621.py](\0621.py) [\0706.py](\0706.py) [\0771.py](\0771.py) [\0819.py](\0819.py) [\tets\0001.py](\tets\0001.py) |
-| Linked List | [\0002.py](\0002.py) [\0021.py](\0021.py) [\0023.py](\0023.py) [\0024.py](\0024.py) [\0092.py](\0092.py) [\0147.py](\0147.py) [\0148.py](\0148.py) [\0206.py](\0206.py) [\0234.py](\0234.py) [\0328.py](\0328.py) [\0622.py](\0622.py) [\0641.py](\0641.py) [\0706.py](\0706.py) |
-| Math | [\0002.py](\0002.py) [\0070.py](\0070.py) [\0241.py](\0241.py) [\0371.py](\0371.py) [\0509.py](\0509.py) [\0973.py](\0973.py) |
-| Recursion | [\0002.py](\0002.py) [\0021.py](\0021.py) [\0024.py](\0024.py) [\0206.py](\0206.py) [\0234.py](\0234.py) [\0241.py](\0241.py) [\0509.py](\0509.py) |
-| String | [\0003.py](\0003.py) [\0005.py](\0005.py) [\0017.py](\0017.py) [\0020.py](\0020.py) [\0049.py](\0049.py) [\0076.py](\0076.py) [\0125.py](\0125.py) [\0179.py](\0179.py) [\0208.py](\0208.py) [\0241.py](\0241.py) [\0242.py](\0242.py) [\0297.py](\0297.py) [\0316.py](\0316.py) [\0336.py](\0336.py) [\0344.py](\0344.py) [\0424.py](\0424.py) [\0771.py](\0771.py) [\0819.py](\0819.py) [\0937.py](\0937.py) |
-| Sliding Window | [\0003.py](\0003.py) [\0076.py](\0076.py) [\0239.py](\0239.py) [\0424.py](\0424.py) |
-| Dynamic Programming | [\0005.py](\0005.py) [\0042.py](\0042.py) [\0053.py](\0053.py) [\0070.py](\0070.py) [\0121.py](\0121.py) [\0122.py](\0122.py) [\0198.py](\0198.py) [\0241.py](\0241.py) [\0509.py](\0509.py) [\0787.py](\0787.py) |
-| Two Pointers | [\0015.py](\0015.py) [\0042.py](\0042.py) [\0075.py](\0075.py) [\0125.py](\0125.py) [\0148.py](\0148.py) [\0167.py](\0167.py) [\0234.py](\0234.py) [\0344.py](\0344.py) [\0349.py](\0349.py) [\0455.py](\0455.py) |
-| Sorting | [\0015.py](\0015.py) [\0049.py](\0049.py) [\0056.py](\0056.py) [\0075.py](\0075.py) [\0147.py](\0147.py) [\0148.py](\0148.py) [\0169.py](\0169.py) [\0179.py](\0179.py) [\0215.py](\0215.py) [\0242.py](\0242.py) [\0347.py](\0347.py) [\0349.py](\0349.py) [\0406.py](\0406.py) [\0455.py](\0455.py) [\0561.py](\0561.py) [\0621.py](\0621.py) [\0937.py](\0937.py) [\0973.py](\0973.py) |
-| Backtracking | [\0017.py](\0017.py) [\0039.py](\0039.py) [\0046.py](\0046.py) [\0077.py](\0077.py) [\0078.py](\0078.py) |
-| Stack | [\0020.py](\0020.py) [\0042.py](\0042.py) [\0225.py](\0225.py) [\0232.py](\0232.py) [\0234.py](\0234.py) [\0316.py](\0316.py) [\0739.py](\0739.py) |
-| Divide and Conquer | [\0023.py](\0023.py) [\0053.py](\0053.py) [\0105.py](\0105.py) [\0108.py](\0108.py) [\0148.py](\0148.py) [\0169.py](\0169.py) [\0191.py](\0191.py) [\0215.py](\0215.py) [\0240.py](\0240.py) [\0347.py](\0347.py) [\0973.py](\0973.py) |
-| Heap (Priority Queue) | [\0023.py](\0023.py) [\0215.py](\0215.py) [\0239.py](\0239.py) [\0347.py](\0347.py) [\0621.py](\0621.py) [\0743.py](\0743.py) [\0787.py](\0787.py) [\0973.py](\0973.py) |
-| Merge Sort | [\0023.py](\0023.py) [\0148.py](\0148.py) |
-| Binary Search | [\0033.py](\0033.py) [\0167.py](\0167.py) [\0240.py](\0240.py) [\0349.py](\0349.py) [\0704.py](\0704.py) |
-| Monotonic Stack | [\0042.py](\0042.py) [\0316.py](\0316.py) [\0739.py](\0739.py) |
-| Memoization | [\0070.py](\0070.py) [\0241.py](\0241.py) [\0509.py](\0509.py) |
-| Bit Manipulation | [\0078.py](\0078.py) [\0136.py](\0136.py) [\0191.py](\0191.py) [\0371.py](\0371.py) [\0393.py](\0393.py) [\0461.py](\0461.py) |
-| Tree | [\0104.py](\0104.py) [\0105.py](\0105.py) [\0108.py](\0108.py) [\0110.py](\0110.py) [\0226.py](\0226.py) [\0297.py](\0297.py) [\0543.py](\0543.py) [\0617.py](\0617.py) [\0687.py](\0687.py) [\0783.py](\0783.py) [\0938.py](\0938.py) [\1038.py](\1038.py) |
-| Depth-First Search | [\0104.py](\0104.py) [\0110.py](\0110.py) [\0200.py](\0200.py) [\0207.py](\0207.py) [\0226.py](\0226.py) [\0297.py](\0297.py) [\0310.py](\0310.py) [\0332.py](\0332.py) [\0543.py](\0543.py) [\0617.py](\0617.py) [\0687.py](\0687.py) [\0743.py](\0743.py) [\0783.py](\0783.py) [\0787.py](\0787.py) [\0938.py](\0938.py) [\1038.py](\1038.py) |
-| Breadth-First Search | [\0104.py](\0104.py) [\0200.py](\0200.py) [\0207.py](\0207.py) [\0226.py](\0226.py) [\0297.py](\0297.py) [\0310.py](\0310.py) [\0617.py](\0617.py) [\0743.py](\0743.py) [\0783.py](\0783.py) [\0787.py](\0787.py) |
-| Binary Tree | [\0104.py](\0104.py) [\0105.py](\0105.py) [\0108.py](\0108.py) [\0110.py](\0110.py) [\0226.py](\0226.py) [\0297.py](\0297.py) [\0543.py](\0543.py) [\0617.py](\0617.py) [\0687.py](\0687.py) [\0783.py](\0783.py) [\0938.py](\0938.py) [\1038.py](\1038.py) |
-| Binary Search Tree | [\0108.py](\0108.py) [\0783.py](\0783.py) [\0938.py](\0938.py) [\1038.py](\1038.py) |
-| Greedy | [\0122.py](\0122.py) [\0134.py](\0134.py) [\0179.py](\0179.py) [\0316.py](\0316.py) [\0406.py](\0406.py) [\0455.py](\0455.py) [\0561.py](\0561.py) [\0621.py](\0621.py) |
-| Counting | [\0169.py](\0169.py) [\0347.py](\0347.py) [\0621.py](\0621.py) [\0819.py](\0819.py) |
-| Union Find | [\0200.py](\0200.py) |
-| Matrix | [\0200.py](\0200.py) [\0240.py](\0240.py) |
-| Graph | [\0207.py](\0207.py) [\0310.py](\0310.py) [\0332.py](\0332.py) [\0743.py](\0743.py) [\0787.py](\0787.py) |
-| Topological Sort | [\0207.py](\0207.py) [\0310.py](\0310.py) |
-| Design | [\0208.py](\0208.py) [\0225.py](\0225.py) [\0232.py](\0232.py) [\0297.py](\0297.py) [\0622.py](\0622.py) [\0641.py](\0641.py) [\0706.py](\0706.py) |
-| Trie | [\0208.py](\0208.py) [\0336.py](\0336.py) |
-| Quickselect | [\0215.py](\0215.py) [\0347.py](\0347.py) [\0973.py](\0973.py) |
-| Queue | [\0225.py](\0225.py) [\0232.py](\0232.py) [\0239.py](\0239.py) [\0622.py](\0622.py) [\0641.py](\0641.py) |
-| Prefix Sum | [\0238.py](\0238.py) |
-| Monotonic Queue | [\0239.py](\0239.py) |
-| Eulerian Circuit | [\0332.py](\0332.py) |
-| Bucket Sort | [\0347.py](\0347.py) |
-| Binary Indexed Tree | [\0406.py](\0406.py) |
-| Segment Tree | [\0406.py](\0406.py) |
-| Counting Sort | [\0561.py](\0561.py) |
-| Hash Function | [\0706.py](\0706.py) |
-| Shortest Path | [\0743.py](\0743.py) [\0787.py](\0787.py) |
-| Geometry | [\0973.py](\0973.py) |
+| Array | [0001.py](/leetcode/0001.py) [0015.py](/leetcode/0015.py) [0033.py](/leetcode/0033.py) [0039.py](/leetcode/0039.py) [0042.py](/leetcode/0042.py) [0046.py](/leetcode/0046.py) [0049.py](/leetcode/0049.py) [0053.py](/leetcode/0053.py) [0056.py](/leetcode/0056.py) [0075.py](/leetcode/0075.py) [0078.py](/leetcode/0078.py) [0105.py](/leetcode/0105.py) [0108.py](/leetcode/0108.py) [0121.py](/leetcode/0121.py) [0122.py](/leetcode/0122.py) [0134.py](/leetcode/0134.py) [0136.py](/leetcode/0136.py) [0167.py](/leetcode/0167.py) [0169.py](/leetcode/0169.py) [0179.py](/leetcode/0179.py) [0198.py](/leetcode/0198.py) [0200.py](/leetcode/0200.py) [0215.py](/leetcode/0215.py) [0238.py](/leetcode/0238.py) [0239.py](/leetcode/0239.py) [0240.py](/leetcode/0240.py) [0336.py](/leetcode/0336.py) [0347.py](/leetcode/0347.py) [0349.py](/leetcode/0349.py) [0393.py](/leetcode/0393.py) [0406.py](/leetcode/0406.py) [0455.py](/leetcode/0455.py) [0561.py](/leetcode/0561.py) [0621.py](/leetcode/0621.py) [0622.py](/leetcode/0622.py) [0641.py](/leetcode/0641.py) [0704.py](/leetcode/0704.py) [0706.py](/leetcode/0706.py) [0739.py](/leetcode/0739.py) [0937.py](/leetcode/0937.py) [0973.py](/leetcode/0973.py) |
+| Hash Table | [0001.py](/leetcode/0001.py) [0003.py](/leetcode/0003.py) [0017.py](/leetcode/0017.py) [0049.py](/leetcode/0049.py) [0076.py](/leetcode/0076.py) [0105.py](/leetcode/0105.py) [0169.py](/leetcode/0169.py) [0208.py](/leetcode/0208.py) [0242.py](/leetcode/0242.py) [0336.py](/leetcode/0336.py) [0347.py](/leetcode/0347.py) [0349.py](/leetcode/0349.py) [0424.py](/leetcode/0424.py) [0621.py](/leetcode/0621.py) [0706.py](/leetcode/0706.py) [0771.py](/leetcode/0771.py) [0819.py](/leetcode/0819.py) |
+| Linked List | [0002.py](/leetcode/0002.py) [0021.py](/leetcode/0021.py) [0023.py](/leetcode/0023.py) [0024.py](/leetcode/0024.py) [0092.py](/leetcode/0092.py) [0147.py](/leetcode/0147.py) [0148.py](/leetcode/0148.py) [0206.py](/leetcode/0206.py) [0234.py](/leetcode/0234.py) [0328.py](/leetcode/0328.py) [0622.py](/leetcode/0622.py) [0641.py](/leetcode/0641.py) [0706.py](/leetcode/0706.py) |
+| Math | [0002.py](/leetcode/0002.py) [0070.py](/leetcode/0070.py) [0241.py](/leetcode/0241.py) [0371.py](/leetcode/0371.py) [0509.py](/leetcode/0509.py) [0973.py](/leetcode/0973.py) |
+| Recursion | [0002.py](/leetcode/0002.py) [0021.py](/leetcode/0021.py) [0024.py](/leetcode/0024.py) [0206.py](/leetcode/0206.py) [0234.py](/leetcode/0234.py) [0241.py](/leetcode/0241.py) [0509.py](/leetcode/0509.py) |
+| String | [0003.py](/leetcode/0003.py) [0005.py](/leetcode/0005.py) [0017.py](/leetcode/0017.py) [0020.py](/leetcode/0020.py) [0049.py](/leetcode/0049.py) [0076.py](/leetcode/0076.py) [0125.py](/leetcode/0125.py) [0179.py](/leetcode/0179.py) [0208.py](/leetcode/0208.py) [0241.py](/leetcode/0241.py) [0242.py](/leetcode/0242.py) [0297.py](/leetcode/0297.py) [0316.py](/leetcode/0316.py) [0336.py](/leetcode/0336.py) [0344.py](/leetcode/0344.py) [0424.py](/leetcode/0424.py) [0771.py](/leetcode/0771.py) [0819.py](/leetcode/0819.py) [0937.py](/leetcode/0937.py) |
+| Sliding Window | [0003.py](/leetcode/0003.py) [0076.py](/leetcode/0076.py) [0239.py](/leetcode/0239.py) [0424.py](/leetcode/0424.py) |
+| Dynamic Programming | [0005.py](/leetcode/0005.py) [0042.py](/leetcode/0042.py) [0053.py](/leetcode/0053.py) [0070.py](/leetcode/0070.py) [0121.py](/leetcode/0121.py) [0122.py](/leetcode/0122.py) [0198.py](/leetcode/0198.py) [0241.py](/leetcode/0241.py) [0509.py](/leetcode/0509.py) [0787.py](/leetcode/0787.py) |
+| Two Pointers | [0015.py](/leetcode/0015.py) [0042.py](/leetcode/0042.py) [0075.py](/leetcode/0075.py) [0125.py](/leetcode/0125.py) [0148.py](/leetcode/0148.py) [0167.py](/leetcode/0167.py) [0234.py](/leetcode/0234.py) [0344.py](/leetcode/0344.py) [0349.py](/leetcode/0349.py) [0455.py](/leetcode/0455.py) |
+| Sorting | [0015.py](/leetcode/0015.py) [0049.py](/leetcode/0049.py) [0056.py](/leetcode/0056.py) [0075.py](/leetcode/0075.py) [0147.py](/leetcode/0147.py) [0148.py](/leetcode/0148.py) [0169.py](/leetcode/0169.py) [0179.py](/leetcode/0179.py) [0215.py](/leetcode/0215.py) [0242.py](/leetcode/0242.py) [0347.py](/leetcode/0347.py) [0349.py](/leetcode/0349.py) [0406.py](/leetcode/0406.py) [0455.py](/leetcode/0455.py) [0561.py](/leetcode/0561.py) [0621.py](/leetcode/0621.py) [0937.py](/leetcode/0937.py) [0973.py](/leetcode/0973.py) |
+| Backtracking | [0017.py](/leetcode/0017.py) [0039.py](/leetcode/0039.py) [0046.py](/leetcode/0046.py) [0077.py](/leetcode/0077.py) [0078.py](/leetcode/0078.py) |
+| Stack | [0020.py](/leetcode/0020.py) [0042.py](/leetcode/0042.py) [0225.py](/leetcode/0225.py) [0232.py](/leetcode/0232.py) [0234.py](/leetcode/0234.py) [0316.py](/leetcode/0316.py) [0739.py](/leetcode/0739.py) |
+| Divide and Conquer | [0023.py](/leetcode/0023.py) [0053.py](/leetcode/0053.py) [0105.py](/leetcode/0105.py) [0108.py](/leetcode/0108.py) [0148.py](/leetcode/0148.py) [0169.py](/leetcode/0169.py) [0191.py](/leetcode/0191.py) [0215.py](/leetcode/0215.py) [0240.py](/leetcode/0240.py) [0347.py](/leetcode/0347.py) [0973.py](/leetcode/0973.py) |
+| Heap (Priority Queue) | [0023.py](/leetcode/0023.py) [0215.py](/leetcode/0215.py) [0239.py](/leetcode/0239.py) [0347.py](/leetcode/0347.py) [0621.py](/leetcode/0621.py) [0743.py](/leetcode/0743.py) [0787.py](/leetcode/0787.py) [0973.py](/leetcode/0973.py) |
+| Merge Sort | [0023.py](/leetcode/0023.py) [0148.py](/leetcode/0148.py) |
+| Binary Search | [0033.py](/leetcode/0033.py) [0167.py](/leetcode/0167.py) [0240.py](/leetcode/0240.py) [0349.py](/leetcode/0349.py) [0704.py](/leetcode/0704.py) |
+| Monotonic Stack | [0042.py](/leetcode/0042.py) [0316.py](/leetcode/0316.py) [0739.py](/leetcode/0739.py) |
+| Memoization | [0070.py](/leetcode/0070.py) [0241.py](/leetcode/0241.py) [0509.py](/leetcode/0509.py) |
+| Bit Manipulation | [0078.py](/leetcode/0078.py) [0136.py](/leetcode/0136.py) [0191.py](/leetcode/0191.py) [0371.py](/leetcode/0371.py) [0393.py](/leetcode/0393.py) [0461.py](/leetcode/0461.py) |
+| Tree | [0104.py](/leetcode/0104.py) [0105.py](/leetcode/0105.py) [0108.py](/leetcode/0108.py) [0110.py](/leetcode/0110.py) [0226.py](/leetcode/0226.py) [0297.py](/leetcode/0297.py) [0543.py](/leetcode/0543.py) [0617.py](/leetcode/0617.py) [0687.py](/leetcode/0687.py) [0783.py](/leetcode/0783.py) [0938.py](/leetcode/0938.py) [1038.py](/leetcode/1038.py) |
+| Depth-First Search | [0104.py](/leetcode/0104.py) [0110.py](/leetcode/0110.py) [0200.py](/leetcode/0200.py) [0207.py](/leetcode/0207.py) [0226.py](/leetcode/0226.py) [0297.py](/leetcode/0297.py) [0310.py](/leetcode/0310.py) [0332.py](/leetcode/0332.py) [0543.py](/leetcode/0543.py) [0617.py](/leetcode/0617.py) [0687.py](/leetcode/0687.py) [0743.py](/leetcode/0743.py) [0783.py](/leetcode/0783.py) [0787.py](/leetcode/0787.py) [0938.py](/leetcode/0938.py) [1038.py](/leetcode/1038.py) |
+| Breadth-First Search | [0104.py](/leetcode/0104.py) [0200.py](/leetcode/0200.py) [0207.py](/leetcode/0207.py) [0226.py](/leetcode/0226.py) [0297.py](/leetcode/0297.py) [0310.py](/leetcode/0310.py) [0617.py](/leetcode/0617.py) [0743.py](/leetcode/0743.py) [0783.py](/leetcode/0783.py) [0787.py](/leetcode/0787.py) |
+| Binary Tree | [0104.py](/leetcode/0104.py) [0105.py](/leetcode/0105.py) [0108.py](/leetcode/0108.py) [0110.py](/leetcode/0110.py) [0226.py](/leetcode/0226.py) [0297.py](/leetcode/0297.py) [0543.py](/leetcode/0543.py) [0617.py](/leetcode/0617.py) [0687.py](/leetcode/0687.py) [0783.py](/leetcode/0783.py) [0938.py](/leetcode/0938.py) [1038.py](/leetcode/1038.py) |
+| Binary Search Tree | [0108.py](/leetcode/0108.py) [0783.py](/leetcode/0783.py) [0938.py](/leetcode/0938.py) [1038.py](/leetcode/1038.py) |
+| Greedy | [0122.py](/leetcode/0122.py) [0134.py](/leetcode/0134.py) [0179.py](/leetcode/0179.py) [0316.py](/leetcode/0316.py) [0406.py](/leetcode/0406.py) [0455.py](/leetcode/0455.py) [0561.py](/leetcode/0561.py) [0621.py](/leetcode/0621.py) |
+| Counting | [0169.py](/leetcode/0169.py) [0347.py](/leetcode/0347.py) [0621.py](/leetcode/0621.py) [0819.py](/leetcode/0819.py) |
+| Union Find | [0200.py](/leetcode/0200.py) |
+| Matrix | [0200.py](/leetcode/0200.py) [0240.py](/leetcode/0240.py) |
+| Graph | [0207.py](/leetcode/0207.py) [0310.py](/leetcode/0310.py) [0332.py](/leetcode/0332.py) [0743.py](/leetcode/0743.py) [0787.py](/leetcode/0787.py) |
+| Topological Sort | [0207.py](/leetcode/0207.py) [0310.py](/leetcode/0310.py) |
+| Design | [0208.py](/leetcode/0208.py) [0225.py](/leetcode/0225.py) [0232.py](/leetcode/0232.py) [0297.py](/leetcode/0297.py) [0622.py](/leetcode/0622.py) [0641.py](/leetcode/0641.py) [0706.py](/leetcode/0706.py) |
+| Trie | [0208.py](/leetcode/0208.py) [0336.py](/leetcode/0336.py) |
+| Quickselect | [0215.py](/leetcode/0215.py) [0347.py](/leetcode/0347.py) [0973.py](/leetcode/0973.py) |
+| Queue | [0225.py](/leetcode/0225.py) [0232.py](/leetcode/0232.py) [0239.py](/leetcode/0239.py) [0622.py](/leetcode/0622.py) [0641.py](/leetcode/0641.py) |
+| Prefix Sum | [0238.py](/leetcode/0238.py) |
+| Monotonic Queue | [0239.py](/leetcode/0239.py) |
+| Eulerian Circuit | [0332.py](/leetcode/0332.py) |
+| Bucket Sort | [0347.py](/leetcode/0347.py) |
+| Binary Indexed Tree | [0406.py](/leetcode/0406.py) |
+| Segment Tree | [0406.py](/leetcode/0406.py) |
+| Counting Sort | [0561.py](/leetcode/0561.py) |
+| Hash Function | [0706.py](/leetcode/0706.py) |
+| Shortest Path | [0743.py](/leetcode/0743.py) [0787.py](/leetcode/0787.py) |
+| Geometry | [0973.py](/leetcode/0973.py) |

@@ -37,16 +37,19 @@ class Directory():
 
     def generate_readme(self):
         category_data = self.get_category_data()
-        empty_string = ''
 
         file = open(os.path.join(
             os.getcwd(), self.path, 'README.md'
         ), 'w', encoding='utf8')
         file.writelines('| Category | Problems |\n| --- | --- |\n')
-        for category, paths in category_data.items():
-            paths = [path.replace(self.path, empty_string) for path in paths]
+        for c, paths in category_data.items():
+            d = [(
+                path.replace(self.path + '\\', '').replace('\\', '/'),
+                '/' + path.replace('\\', '/')
+            ) for path in paths]
+
             file.writelines(
-                f'| {category} | {" ".join(f"[{p}]({p})" for p in paths)} |\n'
+                f'| {c} | {" ".join(f"[{n}]({p})" for n, p in d)} |\n'
             )
         file.close()
 
