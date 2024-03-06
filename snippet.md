@@ -221,9 +221,9 @@ any(iterable) # logical OR
 all(iterable) # logical AND
 ```
 
-# type hint
+## type hint
 
-## composite data type
+### composite data type
 
 ```python
 from typing import List, Dict, Tuple, Set
@@ -231,10 +231,24 @@ def count(lst: List[Tuple[int, str]]) -> Dict[Tuple[int, str], int]:
     return Counter(lst)
 ```
 
-## optional
+### optional
 
 ```python
 data: Optional[Type] = None # Type | None
+```
+
+## class
+
+### constructor
+
+```python
+class Class:
+    def __init__(self, ...):
+        ...
+
+    def method(self, ...):
+        # call constructor of current class
+        type(self)(...)
 ```
 
 ## static method
