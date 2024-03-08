@@ -728,11 +728,24 @@ travelling salesman problem (TSP): a Hamiltonian cycle with the least weight. NP
 
 ## shortest path problem
 
+### Floyd-Warshall algorithm
+
+all pairs shortest path (ASP) / all weights, no negative cycle
+
+based on dynamic programming / time complexity: $O(V^3)$
+
+```python
+for k in range(V):
+    for i in range(V):
+        for j in range(V):
+            dist[i][j] = min(dist[i][j], dist[i][k] + dist[k][j])
+```
+
 ### Dijkstra algorithm
 
-single-source shortest paths of directed graphs with nonnegative weights
+single source shortest path (SSP) / nonnegative weights
 
-time complexity: $O(V^2)$ with list, $O((V+E)\log (V))$ with priority queue
+based on greedy / time complexity: $O(V^2)$ with list, $O((V+E)\log (V))$ with priority queue
 
 ```python
 def dijkstra(graph: Dict[int, List[Tuple[int, int]]],
@@ -741,7 +754,7 @@ def dijkstra(graph: Dict[int, List[Tuple[int, int]]],
     dists[start] = 0
 
     pq: List[Tuple[int, int]] = []
-    heapq.heappush(pq, (dists[k], k))
+    heapq.heappush(pq, (0, start))
 
     while pq:
         dist, node = heapq.heappop(pq)
@@ -755,6 +768,26 @@ def dijkstra(graph: Dict[int, List[Tuple[int, int]]],
                 heapq.heappush(pq, (dists[target], target))
 
     return dists
+```
+
+## union-find (disjoint set)
+
+```py
+class UnionFind:
+    def __init__(self, n: int):
+        self.parent = [i for i in range(n)]
+
+    def find(self, x: int) -> int:
+        if x == self.parent[x]:
+            return x
+
+        return self.find(self.parent[x])
+
+    def union(self, x: int, y: int) -> None:
+        rx = self.find(x)
+        ry = self.find(y)
+
+        self.parent[ry] = rx
 ```
 
 ## topological sort
