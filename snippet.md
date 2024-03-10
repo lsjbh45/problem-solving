@@ -741,6 +741,8 @@ for k in range(V):
             dist[i][j] = min(dist[i][j], dist[i][k] + dist[k][j])
 ```
 
+finding negative cycle: if any diagonal element is negative
+
 ### Dijkstra algorithm
 
 single source shortest path (SSP) / nonnegative weights
@@ -769,6 +771,31 @@ def dijkstra(graph: Dict[int, List[Tuple[int, int]]],
 
     return dists
 ```
+
+### Bellman-Ford algorithm
+
+single source shortest path (SSP) / negative weights, no negative cycle
+
+based on dynamic programming / time complexity: $O(VE)$
+
+```python
+def bellman_ford(v: int, e: int, edges: Tuple[int, int, int],
+                 start: int) -> List[int] | None:
+    dists = [sys.maxsize for _ in range(e)]
+    dists[start] = 0
+
+    for i in range(v):
+        for a, b, t in edges:
+            if dists[a] < sys.maxsize # check reachabilty
+                if dists[a] + t < dists[b]:
+                    dists[b] = dists[a] + t
+                    if i == v - 1:
+                        return None
+
+    return dists
+```
+
+finding negative cycle: any update occurs in the v-th edge relaxation
 
 ## union-find (disjoint set)
 
